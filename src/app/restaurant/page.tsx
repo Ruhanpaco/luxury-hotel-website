@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaCoffee, FaUtensils, FaWineGlass, FaCocktail } from "react-icons/fa";
+import { FaCoffee, FaUtensils, FaWineGlass } from "react-icons/fa";
 
 type CategoryMap = {
   breakfast: string[];
@@ -106,29 +106,6 @@ export default function RestaurantBarPage() {
         </div>
       </section>
 
-      {/* Restaurant Section */}
-      <section className="py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2">
-            <img
-              src="/assets/images/restaurant.jpg"
-              alt="Restaurant Interior"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">
-              A Culinary Journey Awaits
-            </h2>
-            <p className="text-lg text-gray-600">
-              Indulge in a culinary adventure curated by renowned chefs from around the world.
-              Our restaurant combines exquisite flavors, exceptional service, and a luxurious
-              ambiance for an unforgettable dining experience.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Dishes Gallery */}
       <section className="py-20 bg-gray-50 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
@@ -149,7 +126,7 @@ export default function RestaurantBarPage() {
             ))}
           </nav>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
-            {categories[dishCategory].map((image: string, index: number) => (
+            {categories[dishCategory].map((image, index) => (
               <motion.img
                 key={index}
                 src={image}
@@ -158,29 +135,6 @@ export default function RestaurantBarPage() {
                 whileHover={{ scale: 1.05 }}
               />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bar Section */}
-      <section className="py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
-          <div className="w-full md:w-1/2">
-            <img
-              src="/assets/images/bar.jpg"
-              alt="Bar Interior"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">
-              Explore Our Bar
-            </h2>
-            <p className="text-lg text-gray-600">
-              From expertly crafted cocktails to an extensive selection of fine wines, our bar
-              offers something for every taste. Relax in style and savor our world-class
-              offerings.
-            </p>
           </div>
         </div>
       </section>
@@ -205,7 +159,7 @@ export default function RestaurantBarPage() {
             ))}
           </nav>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
-            {drinkCategories[drinkCategory].map((image: string, index: number) => (
+            {drinkCategories[drinkCategory].map((image, index) => (
               <motion.img
                 key={index}
                 src={image}
