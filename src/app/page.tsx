@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Hero from "./components/Hero";
 import ReservationForm from "./components/ReservationForm";
-import { FaSwimmingPool, FaSpa, FaDumbbell, FaCouch, FaMusic, FaCocktail } from "react-icons/fa";
+import { FaSwimmingPool, FaSpa, FaDumbbell, FaCouch } from "react-icons/fa";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 // FeatureCard Props Type

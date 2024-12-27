@@ -1,52 +1,65 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Link from "next/link";
 
-const Hero = () => {
+const Footer = () => {
   return (
-    <motion.section
-      className="relative w-full h-[500px] flex items-center justify-center overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
-      style={{ marginTop: "0px" }} // Ensures it directly touches the navbar
-    >
-      {/* Background Image */}
-      <Image
-        src="/assets/images/luxury-hotel.jpg" // Replace with your image path
-        alt="Luxury Hotel"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority
-      />
+    <footer className="bg-[#a77b50] text-white">
+      <div className="container mx-auto py-10 px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Section */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">LuxuryHotel</h3>
+            <p className="text-sm">
+              Experience unparalleled luxury and comfort at our world-class hotel.
+            </p>
+          </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/">
+                  <a className="text-sm hover:underline">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/rooms">
+                  <a className="text-sm hover:underline">Rooms</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <a className="text-sm hover:underline">About Us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a className="text-sm hover:underline">Contact</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-      {/* Hero Content */}
-      <motion.div
-        className="relative flex flex-col justify-center items-center text-center text-white px-4"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-      >
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-          Welcome to LuxuryHotel
-        </h1>
-        <p className="text-lg md:text-xl mb-6 font-light">
-          Experience unparalleled luxury and comfort.
-        </p>
-        <a
-          href="/book"
-          className="px-6 py-2 bg-white text-black rounded-md hover:bg-gray-200"
-        >
-          Book Now
-        </a>
-      </motion.div>
-    </motion.section>
+          {/* Contact Information */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li className="text-sm">Phone: +1 (234) 567-890</li>
+              <li className="text-sm">Email: info@luxuryhotel.com</li>
+              <li className="text-sm">Location: 123 Luxury Lane, Paradise City</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="mt-8 text-center text-sm text-gray-200">
+          © {new Date().getFullYear()} LuxuryHotel. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 };
 
-export default Hero;
+export default Footer;

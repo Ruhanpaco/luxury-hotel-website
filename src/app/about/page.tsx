@@ -29,7 +29,7 @@ export default function AboutUs() {
             Established in the heart of Paradise City, LuxuryHotel has been a beacon of comfort, luxury, and world-class service for over a decade. From our carefully designed rooms to our thoughtfully curated dining experiences, every detail is tailored to create a memorable stay for our guests.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Whether you're here for business, leisure, or a special occasion, we go above and beyond to exceed your expectations and make you feel at home.
+            Whether you&apos;re here for business, leisure, or a special occasion, we go above and beyond to exceed your expectations and make you feel at home.
           </p>
         </div>
       </motion.section>
@@ -45,13 +45,13 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">Pet-Friendly Policy</h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-            At LuxuryHotel, we believe pets are family too. That’s why we offer a pet-friendly experience to ensure your furry companions feel as comfortable as you do during your stay.
+            At LuxuryHotel, we believe pets are family too. That&apos;s why we offer a pet-friendly experience to ensure your furry companions feel as comfortable as you do during your stay.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Pet Welcome Kit",
-                description: "Includes treats, a comfy bed, and essentials for your pet's stay.",
+                description: "Includes treats, a comfy bed, and essentials for your pet&apos;s stay.",
               },
               {
                 title: "Designated Pet Areas",
@@ -116,7 +116,7 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto text-center px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">We Look Forward to Welcoming You</h2>
           <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-            At LuxuryHotel, every stay is more than just a visit. It’s an experience of elegance, comfort, and exceptional service.
+            At LuxuryHotel, every stay is more than just a visit. It&apos;s an experience of elegance, comfort, and exceptional service.
           </p>
         </div>
       </section>

@@ -1,149 +1,134 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaSwimmer,
-  FaWifi,
-  FaBed,
-  FaConciergeBell,
-  FaUtensils,
-  FaSpa,
-  FaCar,
-  FaCocktail,
-  FaBroom,
-  FaChild,
-  FaBusinessTime,
-  FaDumbbell,
-  FaTv,
-  FaPhone,
-  FaFirstAid,
-} from "react-icons/fa";
 
-const services = [
-  {
-    title: "Room Service",
-    description:
-      "Enjoy 24/7 in-room dining with a wide selection of local and international dishes.",
-    icon: <FaConciergeBell />,
-  },
-  {
-    title: "Free WiFi",
-    description:
-      "Stay connected with complimentary high-speed WiFi throughout the hotel.",
-    icon: <FaWifi />,
-  },
-  {
-    title: "Daily Housekeeping",
-    description:
-      "Our professional team ensures your room is spotless every day for your comfort.",
-    icon: <FaBroom />,
-  },
-  {
-    title: "Infinity Pool",
-    description:
-      "Relax in our temperature-controlled infinity pool with stunning views.",
-    icon: <FaSwimmer />,
-  },
-  {
-    title: "Luxury Spa",
-    description:
-      "Pamper yourself with spa treatments that rejuvenate your body and soul.",
-    icon: <FaSpa />,
-  },
-  {
-    title: "Fitness Center",
-    description:
-      "Stay fit with state-of-the-art gym equipment and personal trainers available.",
-    icon: <FaDumbbell />,
-  },
-  {
-    title: "Fine Dining",
-    description:
-      "Savor gourmet meals crafted by world-class chefs at our on-site restaurant.",
-    icon: <FaUtensils />,
-  },
-  {
-    title: "Kids Activities",
-    description:
-      "Engage your little ones with supervised fun activities designed just for them.",
-    icon: <FaChild />,
-  },
-  {
-    title: "Shuttle Service",
-    description:
-      "Enjoy seamless transportation with our complimentary shuttle service.",
-    icon: <FaCar />,
-  },
-  {
-    title: "Signature Cocktails",
-    description:
-      "Relax with handcrafted cocktails and premium beverages at our stylish bar.",
-    icon: <FaCocktail />,
-  },
-  {
-    title: "Business Center",
-    description:
-      "Host meetings and conferences in our fully-equipped business facilities.",
-    icon: <FaBusinessTime />,
-  },
-  {
-    title: "Smart TVs",
-    description:
-      "Stream your favorite shows and movies with in-room smart TV entertainment.",
-    icon: <FaTv />,
-  },
-  {
-    title: "24/7 Front Desk",
-    description:
-      "Our friendly staff is available round the clock to assist with your needs.",
-    icon: <FaPhone />,
-  },
-  {
-    title: "Medical Assistance",
-    description:
-      "We provide on-call medical assistance to ensure your health and safety.",
-    icon: <FaFirstAid />,
-  },
-];
-
-export default function Services() {
+export default function AboutUs() {
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="relative">
-        <div
-          className="h-[50vh] bg-cover bg-center"
-          style={{ backgroundImage: "url(/assets/images/services-hero.jpg)" }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <h1 className="text-white text-5xl md:text-6xl font-bold tracking-wide">
-              Our Services
-            </h1>
-          </div>
+      <section className="relative bg-gradient-to-r from-[#a77b50] to-[#c89e74] text-white py-20">
+        <div className="container mx-auto px-6 md:px-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About LuxuryHotel</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            At LuxuryHotel, we pride ourselves on delivering exceptional hospitality and an
+            unforgettable experience, blending comfort with elegance.
+          </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-6">
+      {/* Our Story Section */}
+      <motion.section
+        className="py-16 px-6 md:px-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">Our Story</h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Established in the heart of Paradise City, LuxuryHotel has been a beacon of comfort,
+            luxury, and world-class service for over a decade. From our carefully designed rooms
+            to our thoughtfully curated dining experiences, every detail is tailored to create a
+            memorable stay for our guests.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Whether you&apos;re here for business, leisure, or a special occasion, we go above
+            and beyond to exceed your expectations and make you feel at home.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* Pet-Friendly Policy Section */}
+      <motion.section
+        className="py-16 px-6 md:px-12 bg-gray-50"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-12">
-            What We Offer
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
+          <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">Pet-Friendly Policy</h2>
+          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
+            At LuxuryHotel, we believe pets are family too. That&apos;s why we offer a pet-friendly
+            experience to ensure your furry companions feel as comfortable as you do during your
+            stay.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Pet Welcome Kit",
+                description: "Includes treats, a comfy bed, and essentials for your pet&apos;s stay.",
+              },
+              {
+                title: "Designated Pet Areas",
+                description: "Explore our outdoor spaces designed specifically for your pets.",
+              },
+              {
+                title: "Pet-Sitting Services",
+                description: "Need to step out? Our team will care for your pets like their own.",
+              },
+            ].map((feature, index) => (
+              <div
                 key={index}
-                className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
-                whileHover={{ scale: 1.05 }}
+                className="bg-white shadow-md p-6 rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
               >
-                <div className="flex justify-center items-center w-16 h-16 mx-auto rounded-full bg-[#a77b50] text-white text-3xl mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#a77b50]">{service.title}</h3>
-                <p className="text-gray-600 mt-2">{service.description}</p>
-              </motion.div>
+                <h3 className="text-xl font-bold text-[#a77b50] mb-2">{feature.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{feature.description}</p>
+              </div>
             ))}
           </div>
+        </div>
+      </motion.section>
+
+      {/* Our Values Section */}
+      <motion.section
+        className="py-16 px-6 md:px-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#a77b50] mb-6">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Excellence",
+                description:
+                  "We strive for perfection in every service we provide, ensuring every guest feels special.",
+              },
+              {
+                title: "Elegance",
+                description:
+                  "Our design, ambiance, and service radiate sophistication and class.",
+              },
+              {
+                title: "Sustainability",
+                description:
+                  "We care about our planet and take pride in using eco-friendly practices and materials.",
+              },
+            ].map((value, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 shadow-md p-6 rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+              >
+                <h3 className="text-xl font-bold text-[#a77b50] mb-2">{value.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Closing Statement */}
+      <section className="py-16 bg-[#a77b50] text-white">
+        <div className="max-w-6xl mx-auto text-center px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">We Look Forward to Welcoming You</h2>
+          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+            At LuxuryHotel, every stay is more than just a visit. It&apos;s an experience of
+            elegance, comfort, and exceptional service.
+          </p>
         </div>
       </section>
     </div>
