@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-[#a77b50] text-white">
@@ -9,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">LuxuryHotel</h3>
             <p className="text-sm">
-              Experience unparalleled luxury and comfort at our world-class hotel. 
+              Experience unparalleled luxury and comfort at our world-class hotel.
               Your comfort is our priority.
             </p>
           </div>
@@ -19,36 +21,36 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="/"
                   className="text-sm text-white hover:text-black transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/rooms"
                   className="text-sm text-white hover:text-black transition-colors"
                 >
                   Rooms
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/about"
                   className="text-sm text-white hover:text-black transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/contact"
                   className="text-sm text-white hover:text-black transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,34 +78,34 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6 mb-6">
-          <a
+          <Link
             href="#"
             aria-label="Facebook"
             className="text-white hover:text-black transition-colors text-2xl"
           >
             <i className="fab fa-facebook"></i>
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             aria-label="Twitter"
             className="text-white hover:text-black transition-colors text-2xl"
           >
             <i className="fab fa-twitter"></i>
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             aria-label="Instagram"
             className="text-white hover:text-black transition-colors text-2xl"
           >
             <i className="fab fa-instagram"></i>
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             aria-label="LinkedIn"
             className="text-white hover:text-black transition-colors text-2xl"
           >
             <i className="fab fa-linkedin"></i>
-          </a>
+          </Link>
         </div>
 
         {/* Footer Bottom */}
